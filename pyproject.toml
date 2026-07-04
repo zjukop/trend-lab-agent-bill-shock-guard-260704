@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-bill-shock-guard"
+version = "0.1.0"
+description = "Local CLI guardrails for coding-agent token spend."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Agent Bill Shock Guard contributors" }]
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+agent-bill-guard = "agent_bill_shock_guard.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
